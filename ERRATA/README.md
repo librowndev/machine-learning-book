@@ -48,37 +48,66 @@ x_j^{(150)}
 \end{array} \right], \quad i \leq j \leq m.
 $$
 
+&nbsp;
+## Chapter 2
+
+**Page 23**
+
+In the perceptron learning rule example, the predicted label $\hat{y}^{(i)}$ and the true label $y^{(i)}$ are flipped. The example should use
+
+```math
+\hat{y}^{(i)} = 0, \quad y^{(i)} = 1, \quad \eta = 1
+```
+
+instead of
+
+```math
+\hat{y}^{(i)} = 1, \quad y^{(i)} = 0, \quad \eta = 1
+```
+
+Source: [#225](https://github.com/rasbt/machine-learning-book/issues/225)
+
+**Page 38**
+
+In the MSE derivative, the final summation should be over the feature index $j$, not over the training-example index $i$.
+
+Source: [#64](https://github.com/rasbt/machine-learning-book/issues/64)
+
 
 &nbsp;
 ## Chapter 3
 
-**Page 63**
-
-A small stylistic issue: The summation symbol at the bottom currently shows 
-
-```math
-\sum_{i=1}
-```
-
- but should be either 
-
- ```math
- \sum_{i}
- ```
-
-or 
-
-```math
-\sum_{i=1}^{n}
-```
-
 **Page 66**
 
-The doc strings of the LogisticRegressionGD classifier reference "Mean squared error loss" -- this is a copy-paste error and should be "Log loss".
+The doc strings of the LogisticRegressionGD classifier reference "Mean squared error loss". This is a copy-paste error and should be "Log loss".
+
+Source PR: [#98](https://github.com/rasbt/machine-learning-book/pull/98)
+
+**Page 67**
+
+In the LogisticRegressionGD loss calculation, the division by `X.shape[0]` should apply to the full loss expression, not just the second term.
+
+Source PRs: [#104](https://github.com/rasbt/machine-learning-book/pull/104), [#241](https://github.com/rasbt/machine-learning-book/pull/241)
 
 **Page 84**
 
 A larger gamma value should create a smaller (not larger) radius.
+
+**Page 94**
+
+The decision tree example uses only petal length and petal width, so the corresponding `feature_names` list should be
+
+```python
+feature_names = ['Petal length', 'Petal width']
+```
+
+instead of
+
+```python
+feature_names = ['Sepal length', 'Sepal width', 'Petal length', 'Petal width']
+```
+
+Sources: [#101](https://github.com/rasbt/machine-learning-book/issues/101), PR [#226](https://github.com/rasbt/machine-learning-book/pull/226)
 
 &nbsp;
 ## Chapter 4
@@ -279,6 +308,3 @@ KL(P \| Q) = \sum_{i} P(x_i) \log \frac{P(x_i)}{Q(x_i)}
 
 
 For books printed before 16 Nov 2022, please see the [Old Errata](old-errata).
-
-
-
