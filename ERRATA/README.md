@@ -134,6 +134,15 @@ covariance normalization term $1/(n-1)$. The wording should be
 
 Source: [#229](https://github.com/rasbt/machine-learning-book/issues/229)
 
+**Page 157-158**
+
+In the LDA section, the within-class scatter matrix should not be
+computed by summing unweighted class covariance matrices. Since `np.cov`
+uses the unbiased normalization by default, each class covariance matrix
+should be multiplied by `n_i - 1` before adding it to `S_W`.
+
+Source: [#169](https://github.com/rasbt/machine-learning-book/issues/169)
+
 &nbsp;
 ## Chapter 6
 
