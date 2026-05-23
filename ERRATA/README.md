@@ -151,6 +151,26 @@ Source: [#169](https://github.com/rasbt/machine-learning-book/issues/169)
 In the Figure 6.6 caption, it currently says "...SVM hyperparameter C" but it should say "...logistic regression hyperparameter C".
 
 &nbsp;
+## Chapter 7
+
+**Page 239**
+
+In the logistic loss equation for a single training example, the second
+term should be subtracted, not added. The equation should be
+
+```math
+L_i = -y_i \log(p_i) - (1 - y_i)\log(1 - p_i)
+```
+
+instead of
+
+```math
+L_i = -y_i \log(p_i) + (1 - y_i)\log(1 - p_i)
+```
+
+Source: [#239](https://github.com/rasbt/machine-learning-book/issues/239)
+
+&nbsp;
 ## Chapter 10
 
 **Page 313**
