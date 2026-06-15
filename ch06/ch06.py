@@ -375,7 +375,7 @@ param_grid = [{'svc__C': param_range,
                'svc__kernel': ['linear']},
               {'svc__C': param_range,
                'svc__gamma': param_range,
-               'svc__kernel': ['rbg']}]
+               'svc__kernel': ['rbf']}]
 
 
 rs = RandomizedSearchCV(estimator=pipe_svc,
